@@ -174,3 +174,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "frontend/dist/static")
 ]
+
+REST_FRAMEWORK = {
+    # 使用Django的标准`django.contrib.auth`权限管理类,
+    # 或者为尚未认证的用户，赋予只读权限.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'  # 所有人都能访问API,有读写权限
+    ]
+}
