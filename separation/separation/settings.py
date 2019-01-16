@@ -26,7 +26,7 @@ SECRET_KEY = ')&&^eosu(%sm7+e)g$!&0ask53+=pdbun(f)e@eas6m57jbybt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']  # 开发阶段允许任意域名;不安全，上线要改
 
 
 # Application definition
@@ -174,7 +174,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # add for vue.js
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static"),  # 静态文件
     os.path.join(BASE_DIR, "frontend/dist/static")
 ]
 

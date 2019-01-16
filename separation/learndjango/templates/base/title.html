@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        django学习之路
+    {% endblock %}</title>
+    {% block add_style %}
+    {% endblock %}
+</head>
+<body>
+<div id="allcontent" style="width: 100%;height: 100%">
+    <!--标题栏-->
+    {% include "base/header.html" %}
+    {% block content %}
+
+    {% endblock %}
+    <div style="margin: 20px 0;clear: both">
+        {% include "base/footer.html" %}
+    </div>
+</div>
+{% block add_script %}
+    <script>
+
+    </script>
+{% endblock %}
+</body>
+</html>

@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <label>成功</label>
-</body>
-</html>
+{% extends "base/title.html" %}
+{% load static %}
+{% block content %}
+
+{% endblock %}
+{% block add_script %}
+    <script type="text/javascript">
+        $('#system_manage').addClass('title_active');
+    </script>
+
+{% endblock %}
