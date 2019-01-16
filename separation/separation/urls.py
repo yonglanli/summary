@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^docs/', include_docs_urls(title="简单的前后台Vue分离系统")),  # 配置url的文档
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^learndjango/', include('learndjango.urls', namespace="learndjango")),
 ]
