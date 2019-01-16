@@ -1,7 +1,32 @@
 {% extends "base/title.html" %}
 {% load static %}
+{% block add_style %}
+    <style>
+        img {
+            {#width: 60%;#}
+            {#height: 30%;#}
+            width: 205px;
+            height: 104px;
+        }
+    </style>
+{% endblock %}
 {% block content %}
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6" onclick="window.location.href='/manage/news-list?'">
+                <img src="{% static 'image/news.jpg' %}">
+                <h4>
+                    新闻中心
+                </h4>
+            </div>
+        </div>
+        <div class="data-manage-box">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a href="/learndjango/"><img src="/static/image/news.jpg" alt="..."></a>
+                <h4 class="data-manage-title" class="data-manage-title"><a href="#">新闻中心</a></h4>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 {% block add_script %}
     <script type="text/javascript">
