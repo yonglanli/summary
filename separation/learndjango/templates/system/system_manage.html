@@ -26,9 +26,16 @@
                 <h4 class="data-manage-title" class="data-manage-title"><a href="#">新闻中心</a></h4>
             </div>
         </div>
+        <div class="right-content">
+            <!--内容-->
+            <div class="main-content">
+                <data-info v-else-if="nav === 'dataInfo' && id" :id="id" :current-menu="nav"></data-info>
+            </div>
+        </div>
     </div>
 {% endblock %}
 {% block add_script %}
+    <script src="{% static 'vue_components/data_info.js' %}"></script>
     <script type="text/javascript">
         $('#system_manage').addClass('title_active');
     </script>

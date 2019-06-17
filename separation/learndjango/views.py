@@ -6,7 +6,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse(u"欢迎光临!")
+    return render(request, 'indexL.html')
+    # return HttpResponse(u"欢迎光临!")
 
 
 def system_manage(request):
