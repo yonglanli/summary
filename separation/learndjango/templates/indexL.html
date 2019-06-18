@@ -12,7 +12,7 @@
             <tr>
                 <td><p id ='demo'>改变HTML内容</p></td>
                 <td>
-                    <button type="button" onclick="document.getElementById('demo').innerHTML='Hello JavaScript!'">点击我</button>
+                    <button type="button" onclick="updateContent()">点击我</button>
                 </td>
             </tr>
             </tbody>
@@ -39,10 +39,47 @@
                 <p>小型设备4列</p>
             </div>
         </div>
+        <div class="row">
+            <p id="demo1"></p>
+            <button type="button" class="btn btn-info" onclick="document.getElementById('demo1').innerHTML=Date()">显示日期和时间</button>
+            <button type="button" class="btn btn-info" onclick="document.getElementById('demo1').style.display='none'">隐藏日期</button>
+            <button type="button" class="btn btn-info" onclick="document.getElementById('demo1').style.display='block'">显示隐藏日期</button>
+        </div>
+        <div class="row">
+            <p id="demo2"></p>
+            <button type="button" onclick="output()">输出的各种形式</button>
+        </div>
+        <div>
+            <p><b>JavaScript程序</b>是一系列由计算机执行的<b>语句</b></p>
+            <p id="demo3"></p>
+            <button class="btn-primary" onclick="add()" type="button">两数相加</button>
+        </div>
     </div>
 
     <script>
+        //单行注释
+        /* 多行注释
+        下面代码会改变
+        id="demo"的段落 */
+        function updateContent() {
+            document.getElementById('demo').innerHTML='Hello JavaScript!'//行末的单行注释
+        }
 
+        function output() {
+            document.write(5 + 6);//写入HTML输出
+            document.getElementById("demo2").innerHTML = 5 + 6;//写入HTML元素
+            window.alert(5 + 6);//写入窗口提示框
+            console.log(5 + 6);//写入浏览器控制台
+        }
+        function add() {
+            var x,y,z;//创建变量，对大小写敏感，逗号分割语句，多行声明多个变量
+            x=22;//折行的最佳位置是运算符或逗号之后
+            //y=11;阻止执行的单行注释
+            y=10;
+            //var y;再次声明某个变量，值不会丢失
+            z=x+y;
+            document.getElementById('demo3').innerHTML="z的值是"+z+"。";
+        }
     </script>
 </body>
 </html>
